@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PrimaryInput from '@/utils/PrimaryInput';
-import { RegisterModel } from '@/models/RegisterModel';
+import { RegisterModel } from '@/services/models/RegisterModel';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
