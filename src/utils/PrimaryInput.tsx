@@ -17,10 +17,10 @@ interface FormProps<TFormValues extends Record<string, unknown>> {
   focusBorderColor?: string;
   required?: boolean;
   validate?: any;
-  customClass?: any;
+  customclassName?: any;
 }
 
-const fixedInputClass =
+const fixedInputclassName =
   'rounded-md  relative  w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none  focus:border-blue-500 focus:z-10 sm:text-sm';
 
 const PrimaryInput = <TFormValues extends Record<string, any>>({
@@ -50,7 +50,7 @@ const PrimaryInput = <TFormValues extends Record<string, any>>({
             placeholder={placeholder}
             {...register(name, { required, ...validate })}
             defaultValue={defaultValue}
-            className={fixedInputClass}
+            className={fixedInputclassName}
           />
           {icon && (
             <button
