@@ -6,11 +6,12 @@ import { Menu } from '@headlessui/react';
 import Link from 'next/link';
 import { RiNotification3Fill, RiSearch2Fill } from 'react-icons/ri';
 import SearchBox from '../../utils/SearchBox';
+import Image from 'next/image';
 
 function Header() {
   return (
-    <div className="w-full bg-white">
-      <nav className="flex w-full ml-auto h-12 items-center px-4 justify-between ">
+    <div className="w-full bg-white py-3">
+      <nav className="flex w-full items-center justify-between px-4">
         <SearchBox />
         <div className="flex">
           <div>
@@ -36,7 +37,7 @@ function Header() {
                     </Menu.Items>
                   </Menu>
                 ) : ( */}
-            <Link href="/login" className="flex pt-2 pl-2">
+            <Link href="/login" className="flex mx-4">
               <div className="text-cyan-300">
                 <FaRegUser />
               </div>

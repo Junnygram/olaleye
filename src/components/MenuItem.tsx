@@ -5,19 +5,23 @@ interface MenuProps {
   menuTitle: string;
   icon: any;
 }
+
 function MenuItem({ menuTitle, icon }: MenuProps) {
   const router = useRouter();
-  const url = `${menuTitle}`;
+  const url = `/${menuTitle}`;
+
+  const isActive = router.pathname === url;
+
   return (
     <Link href={url} passHref>
       <div
-        className={`py-2 pt-4 overflow-hidden cursor-default rounded-sm ${
-          router.pathname.startsWith(url) ? 'bg-[#B2BEB5]' : 'bg-transparent'
+        className={`py-2 overflow-hidden cursor-default rounded-sm ${
+          isActive ? 'bg-gray-400' : ''
         }`}
       >
-        <div className="flex text-cyan-300 active:bg-gray-300">
-          <div className="bg-white font-medium my-auto">{icon}</div>
-          <span className="font-semibold text-xl px-2 capitalize ">
+        <div className="flex text-cyan-300">
+          <div className="font-medium my-auto py-1">{icon}</div>
+          <span className="hidden md:flex md:text-sm font-medium text-xl px-2 capitalize">
             {menuTitle}
           </span>
         </div>

@@ -13,18 +13,19 @@ import MenuItem from './MenuItem';
 
 const Sidebar = () => {
   return (
-    <div className="bg-white w-[16%] h-full fixed pt-8 px-6 shadow-xl ">
+    <div className="bg-white w-[16%] h-screen pt-8 px-6 shadow-xl relative">
       <Link href="/" passHref>
-        <div className="flex mx-4">
+        <div className="flex items-center">
           <div>
             <Image src="/assets/logo.jpeg" alt="logo" height={50} width={50} />
           </div>
-          <div className="flex text-cyan-300  ml-2 font-bold">
-            Ola <span className="text-gray-700"> Leye</span>
+          <div className="hidden md:flex text-cyan-300 font-bold ml-2">
+            Ola <span className="text-gray-700">Leye</span>
           </div>
         </div>
       </Link>
-      <div className="text-start gap-2 ml-4 mt-4">
+
+      <div className="text-start gap-2 ml-4 my-4">
         <MenuItem menuTitle="dashboard" icon={<MdOutlineDashboard />} />
         <MenuItem menuTitle="courses" icon={<SiCoursera />} />
         <MenuItem menuTitle="quizzes" icon={<CiWallet />} />

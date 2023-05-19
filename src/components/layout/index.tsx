@@ -20,11 +20,10 @@ export const Layout = ({ children }: LayoutProps) => {
       ) : (
         <div className="flex bg-[#f6f7f8]">
           <Sidebar />
-          <div className="w-full ml-[12rem] pl-3 relative min-h-full">
+          <div className="w-full relative h-full">
             <Header />
-            <div className="w-full mb-9 ">
-              <div>{children}</div>
-            </div>
+            <div className="w-full mb-9 ">{children}</div>
+            {/* {router.asPath === '/' ? <Footer /> : null} */}
           </div>
         </div>
       )}
