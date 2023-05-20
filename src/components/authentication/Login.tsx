@@ -120,19 +120,14 @@ const Login = () => {
         </div>
         <div>
           <div className="flex flex-col items-center  justify-center px-6 py-8  h-screen ">
-            <a
-              href="#"
-              className="flex items-center mb-6 text-2xl font-semibold text-gray-900 "
-            >
+            <div className="my-2">
               <Image
-                className="w-8 mr-2"
-                src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
+                src="/assets/logo.jpeg"
                 alt="logo"
-                width={10}
-                height={10}
+                height={50}
+                width={50}
               />
-              Olaleye
-            </a>
+            </div>
             <div className="w-full bg-white rounded-lg shadow   sm:max-w-md  ">
               <div className="p-6">
                 <h1 className="text-xl flex justify-center font-sm   text-gray-900 md:text-2xl ">
@@ -167,13 +162,17 @@ const Login = () => {
                   />
                 </form>
 
-                <div className="text-sm flex justify-center">
-                  Don&apos;t have an account? You can
-                  <Link href="/register">
-                    <span className="text-blue-600 hover:text-blue-800 ">
-                      {' '}
-                      &nbsp;signup here.
-                    </span>
+                <div className="text-sm flex justify-between">
+                  <div>
+                    Don&apos;t have an account? You can <br />
+                    <Link href="/register">
+                      <span className="text-blue-600 hover:text-blue-800 ">
+                        signup here.
+                      </span>
+                    </Link>
+                  </div>
+                  <Link className="text-blue-600" href="/login/reset">
+                    Forgot password
                   </Link>
                 </div>
               </div>

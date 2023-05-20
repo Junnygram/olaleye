@@ -2,10 +2,17 @@ import { Layout } from '@/components/layout';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
+  const isHomePage = router.pathname === '/';
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      {isHomePage ? (
+        <Component {...pageProps} />
+      ) : (
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      )}
+    </>
   );
 }

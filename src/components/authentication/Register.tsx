@@ -116,23 +116,13 @@ const Register = () => {
           </Carousel>
         </div>
         <div className="flex flex-col items-center  justify-center px-6 py-8  h-screen lg:py-0">
-          <a
-            href="#"
-            className="flex items-center mb-6 text-2xl font-semibold text-gray-900 "
-          >
-            <Image
-              className="w-8 mr-2"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
-              alt="logo"
-              width={10}
-              height={10}
-            />
-            Olaleye
-          </a>
+          <div>
+            <Image src="/assets/logo.jpeg" alt="logo" height={50} width={50} />
+          </div>
           <div className="w-full bg-white rounded-lg shadow   sm:max-w-md  ">
             <div className="p-6">
               <h1 className="text-xl flex justify-center font-sm   text-gray-900 md:text-2xl ">
-                Sign in to your account
+                Create your account
               </h1>
 
               <form onSubmit={handleSubmit(onSubmitRegister)}>

@@ -5,8 +5,8 @@ import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
 interface FormProps<TFormValues extends Record<string, unknown>> {
   name: Path<TFormValues>;
   register: UseFormRegister<TFormValues>;
-  error: FieldError | undefined;
   label: string;
+  error?: FieldError | undefined;
   type?: string;
   defaultValue?: any;
   fontWeight?: number | string;
