@@ -1,7 +1,7 @@
 import React from 'react';
 
 const index = () => {
-  return <div>adds-on</div>;
+  return <div>course builder</div>;
 };
 
 export default index;

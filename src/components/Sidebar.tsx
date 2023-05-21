@@ -1,40 +1,50 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { RiAdvertisementLine } from 'react-icons/ri';
+import {
+  AiOutlineRead,
+  AiOutlineSchedule,
+  AiOutlineHome,
+} from 'react-icons/ai';
+import { CiLogout } from 'react-icons/ci';
 import { SiCoursera } from 'react-icons/si';
 import { MdOutlineDashboard, MdAssignmentLate } from 'react-icons/md';
-import { GoReport } from 'react-icons/go';
+import { MdPayment } from 'react-icons/md';
 import { FiSettings } from 'react-icons/fi';
-import { TbCurrencyNaira } from 'react-icons/tb';
-import { BsPersonFill } from 'react-icons/bs';
+import { BiHelpCircle } from 'react-icons/bi';
+import { BiMessageDetail } from 'react-icons/bi';
+import { GiBookmark } from 'react-icons/gi';
 import { CiWallet } from 'react-icons/ci';
 import MenuItem from './MenuItem';
 
 const Sidebar = () => {
   return (
-    <div className="bg-white w-[16%] h-screen pt-8 px-6 shadow-xl relative">
-      <Link href="/" passHref>
-        <div className="flex items-center">
-          <div>
-            <Image src="/assets/logo.jpeg" alt="logo" height={50} width={50} />
+    <div className="bg-slate-800 flex flex-col justify-between w-[16%] h-screen pt-8 px-6 shadow-xl relative rounded-lg">
+      <div>
+        <div className="flex justify-center ">
+          <div className="">
+            <GiBookmark size={30} />
           </div>
-          <div className="hidden md:flex text-cyan-300 font-bold ml-2">
-            Ola <span className="text-gray-700">Leye</span>
+          <div className="hidden md:flex text-indigo-300 font-bold mx-2">
+            OlaLeye
           </div>
         </div>
-      </Link>
 
-      <div className="text-start gap-2 ml-4 my-4">
-        <MenuItem menuTitle="dashboard" icon={<MdOutlineDashboard />} />
-        <MenuItem menuTitle="courses" icon={<SiCoursera />} />
-        <MenuItem menuTitle="quizzes" icon={<CiWallet />} />
-        <MenuItem menuTitle="assignments" icon={<MdAssignmentLate />} />
-        <MenuItem menuTitle="students" icon={<BsPersonFill />} />
-        <MenuItem menuTitle="earnings" icon={<TbCurrencyNaira />} />
-        <MenuItem menuTitle="reports" icon={<GoReport />} />
-        <MenuItem menuTitle="adds-on" icon={<RiAdvertisementLine />} />
-        <MenuItem menuTitle="settings" icon={<FiSettings />} />
+        <div className="text-start gap-2  my-4">
+          <MenuItem menuTitle="dashboard" icon={<MdOutlineDashboard />} />
+          <MenuItem menuTitle="course builder" icon={<SiCoursera />} />
+          <MenuItem menuTitle="my courses" icon={<CiWallet />} />
+          <MenuItem menuTitle="assignments" icon={<AiOutlineHome />} />
+          <MenuItem menuTitle="schedule" icon={<AiOutlineSchedule />} />
+          <MenuItem menuTitle="messages" icon={<BiMessageDetail />} />
+          <MenuItem menuTitle="payments" icon={<MdPayment />} />
+          <MenuItem menuTitle="settings" icon={<FiSettings />} />
+        </div>
+      </div>
+      <div className="my-8">
+        {' '}
+        <MenuItem menuTitle="help" icon={<BiHelpCircle />} />
+        <MenuItem menuTitle="logout" icon={<CiLogout />} />
       </div>
     </div>
   );

@@ -15,13 +15,15 @@ function MenuItem({ menuTitle, icon }: MenuProps) {
   return (
     <Link href={url} passHref>
       <div
-        className={`py-2 overflow-hidden cursor-default rounded-sm ${
-          isActive ? 'bg-gray-400' : ''
+        className={`py-2 overflow-hidden cursor-default  rounded-sm ${
+          isActive ? 'text-indigo-700' : ''
         }`}
       >
-        <div className="flex text-cyan-300">
+        <div
+          className={`flex text-gray-300${isActive ? 'text-indigo-700' : ''}`}
+        >
           <div className="font-medium my-auto py-1">{icon}</div>
-          <span className="hidden md:flex md:text-sm font-medium text-xl px-2 capitalize">
+          <span className="hidden text-center md:flex md:text-sm font-medium text-xl px-2 capitalize">
             {menuTitle}
           </span>
         </div>

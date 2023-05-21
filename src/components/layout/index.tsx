@@ -23,7 +23,6 @@ export const Layout = ({ children }: LayoutProps) => {
           <div className="w-full relative h-full">
             <Header />
             <div className="w-full mb-9 ">{children}</div>
-            {/* {router.asPath === '/' ? <Footer /> : null} */}
           </div>
         </div>
       )}
