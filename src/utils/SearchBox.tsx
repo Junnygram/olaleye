@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
-import { AiOutlineSearch } from 'react-icons/ai';
+import { BiSearch } from 'react-icons/bi';
 
 export default function SearchBox() {
   const router = useRouter();
@@ -13,17 +13,18 @@ export default function SearchBox() {
 
   return (
     <>
-      <input
-        type="search"
-        onChange={(e) => setQuery(e.target.value)}
-        className=" p-2 rounded-lg mx-4 w-2/5 border-solid border-2 border-cyan-300 text-black"
-        placeholder="Search course...."
-      />
-      <AiOutlineSearch
-        size={20}
-        className="text-cyan-300 mr-auto hover:bg-red-100 mx-[-8px]"
-        // onSubmit={submitHandler}
-      />
+      <div className="relative ml-4">
+        <input
+          type="search"
+          onChange={(e) => setQuery(e.target.value)}
+          id="search"
+          placeholder="Search course"
+          className="bg-white border-2 text-white px-8 py-1 rounded-md focus:outline-none"
+        />
+        <label htmlFor="search" className="absolute top-0 left-0 my-2 ml-2">
+          <BiSearch className="text-gray-400" />
+        </label>
+      </div>
     </>
   );
 }

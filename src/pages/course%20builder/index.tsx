@@ -1,7 +1,19 @@
+import TopPage from '@/utils/TopPage';
 import React from 'react';
 
 const index = () => {
-  return <div>course builder</div>;
+  return (
+    <div>
+      <TopPage
+        details={'Hey Builder'}
+        name={'olaleye'}
+        info={'olaleye@email.com'}
+        page={'yo'}
+        right={true}
+        src={'/assets/006.jpeg'}
+      />
+    </div>
+  );
 };
 
 export default index;

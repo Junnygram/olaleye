@@ -19,7 +19,7 @@ import MenuItem from './MenuItem';
 
 const Sidebar = () => {
   return (
-    <div className="bg-slate-800 flex flex-col justify-between w-[16%] h-screen pt-8 px-6 shadow-xl relative rounded-lg">
+    <div className="bg-slate-800 flex flex-col justify-between w-[16%] min-h-screen pt-4 px-6 shadow-xl relative">
       <div>
         <div className="flex justify-center ">
           <div className="">
