@@ -13,7 +13,7 @@ export default function SearchBox() {
 
   return (
     <>
-      <div className="relative ml-4">
+      <div className="hidden md:flex relative ml-4">
         <input
           type="search"
           onChange={(e) => setQuery(e.target.value)}

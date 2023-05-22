@@ -1,25 +1,32 @@
+/* eslint-disable react/no-unescaped-entities */
+import TopPage from '@/utils/TopPage';
 import Link from 'next/link';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { ImSad } from 'react-icons/im';
 
-export default function NotFound() {
-  //after 3s it redirects to the home page
-  const router = useRouter();
-  useEffect(() => {
-    setTimeout(() => {
-      router.push('/dashboard');
-    }, 3000000);
-  });
+const NotFoundPage = () => {
   return (
-    <div className=" bg-white text-cyan-300 w-full h-full  ">
-      <span className="flex text-cyan-300">
-        404 <ImSad size={25} />
-      </span>
-      <span>The page cannot be found </span>
+    <div>
       <div>
-        Go back to the <Link href="/"> Homepage</Link>
+        <TopPage
+          details={'Not Found'}
+          name={'olaleye'}
+          info={'olaleye@email.com'}
+          page={'yo'}
+          right={true}
+          src={'/assets/006.jpeg'}
+        />
+      </div>
+      <div className="flex flex-col text-center items-center justify-center min-h-screen bg-gray-100">
+        <h1 className="text-4xl  font-bold mb-4">404 - Page Not Found</h1>
+
+        <p className="text-lg mb-6">
+          Oops! The page you're looking for does not exist.
+        </p>
+        <Link href="/dashboard" className="text-indigo-500 underline">
+          Go back to your dashboard
+        </Link>
       </div>
     </div>
   );
-}
+};
+
+export default NotFoundPage;

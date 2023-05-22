@@ -1,11 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from './Context/UserContext';
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  AiOutlineRead,
-  AiOutlineSchedule,
-  AiOutlineHome,
-} from 'react-icons/ai';
+import { AiOutlineSchedule, AiOutlineHome } from 'react-icons/ai';
 import { CiLogout } from 'react-icons/ci';
 import { SiCoursera } from 'react-icons/si';
 import { MdOutlineDashboard, MdAssignmentLate } from 'react-icons/md';
@@ -18,6 +15,7 @@ import { CiWallet } from 'react-icons/ci';
 import MenuItem from './MenuItem';
 
 const Sidebar = () => {
+  // const { logout } = useContext(UserContext);
   return (
     <div className="bg-slate-800 flex flex-col justify-between w-[16%] min-h-screen pt-4 px-6 shadow-xl relative">
       <div>
@@ -44,7 +42,8 @@ const Sidebar = () => {
       <div className="my-8">
         {' '}
         <MenuItem menuTitle="help" icon={<BiHelpCircle />} />
-        <MenuItem menuTitle="logout" icon={<CiLogout />} />
+        {/* <div onClick={() => logout('user')}> */}
+        <MenuItem menuTitle="logout" icon={<CiLogout />} /> {/* </div> */}
       </div>
     </div>
   );

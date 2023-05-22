@@ -1,7 +1,12 @@
 import TopPage from '@/utils/TopPage';
 import React from 'react';
+import { fetchDataFromAPI } from '@/utils/api';
+import { GetServerSideProps } from 'next';
 
-const index = () => {
+interface DashboardProps {
+  data: any;
+}
+const index = ({ data }: DashboardProps) => {
   return (
     <div>
       <TopPage
@@ -17,3 +22,15 @@ const index = () => {
 };
 
 export default index;
+
+// export const getServerSideProps: GetServerSideProps<
+//   DashboardProps
+// > = async () => {
+//   const data = await fetchDataFromAPI();
+
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// };
