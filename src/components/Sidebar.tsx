@@ -10,6 +10,7 @@ import { MdPayment } from 'react-icons/md';
 import { FiSettings } from 'react-icons/fi';
 import { BiHelpCircle } from 'react-icons/bi';
 import { BiMessageDetail } from 'react-icons/bi';
+import { AiOutlineRead } from 'react-icons/ai';
 import { GiBookmark } from 'react-icons/gi';
 import { CiWallet } from 'react-icons/ci';
 import MenuItem from './MenuItem';
@@ -20,7 +21,7 @@ const Sidebar = () => {
     <div className="bg-slate-800 flex flex-col justify-between w-[16%] min-h-screen pt-4 px-6 shadow-xl relative">
       <div>
         <div className="flex justify-center ">
-          <div className="">
+          <div className="text-white">
             <GiBookmark size={30} />
           </div>
           <div className="hidden md:flex text-indigo-300 font-bold mx-2">

@@ -1,8 +1,11 @@
+/* eslint-disable react/jsx-no-undef */
 import React from 'react';
 import Image from 'next/image';
 import SearchBox from './SearchBox';
 import { BsChevronDown } from 'react-icons/bs';
-import { IoIosNotificationsOutline } from 'react-icons/io';
+import DropdownLink from '@/components/DropdownLink';
+import { FaAngleDown } from 'react-icons/fa';
+import { Menu } from '@headlessui/react';
 interface TopPageProps {
   page: string;
   details: string;
@@ -15,7 +18,7 @@ interface TopPageProps {
 function TopPage({ details, right, name, info, src }: TopPageProps) {
   return (
     <div className="bg-white  ">
-      <div className="flex  py-2 px-2 md:px-6 justify-between align-center w-full mx-auto  ">
+      <div className="flex  py-2 px-1 md:px-4 justify-between align-center w-full mx-auto  ">
         <div className=" font-semibold my-2">{details}</div>
         <div className="flex md:gap-12">
           <div>
@@ -41,9 +44,30 @@ function TopPage({ details, right, name, info, src }: TopPageProps) {
                   className="rounded-full h-10 w-20 object-cover "
                 />{' '}
               </div>
-              <div className="my-3 hidden md:flex">
-                <BsChevronDown />
-              </div>
+              <Menu as="div" className="relative inline-block font-medium  ">
+                <Menu.Button className="text-blue-600 pt-2">
+                  <FaAngleDown />
+                </Menu.Button>
+                <Menu.Items className="absolute text-center border-2   divide-y divide-violet-600 right-0 w-20 md:w-32 top-14 origin-top-right bg-white  shadow-lg ">
+                  <div>
+                    <Menu.Items>
+                      <DropdownLink className="dropdown-link" href="/profile">
+                        Profile
+                      </DropdownLink>
+                    </Menu.Items>
+                  </div>
+                  <div>
+                    <Menu.Item>
+                      <DropdownLink
+                        className="dropdown-link"
+                        href="/activities"
+                      >
+                        Activities
+                      </DropdownLink>
+                    </Menu.Item>
+                  </div>
+                </Menu.Items>
+              </Menu>
             </div>
           )}
         </div>
