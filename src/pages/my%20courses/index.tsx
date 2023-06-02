@@ -1,17 +1,10 @@
-import TopPage from '@/utils/TopPage';
+import MyCourses from '@/utils/pagesComponent/MyCourses';
 import React from 'react';
 
 const index = () => {
   return (
     <div>
-      <TopPage
-        details={'Courses'}
-        name={'olaleye'}
-        info={'olaleye@email.com'}
-        page={'yo'}
-        right={true}
-        src={'/assets/006.jpeg'}
-      />
+      <MyCourses />
     </div>
   );
 };

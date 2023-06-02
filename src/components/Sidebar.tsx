@@ -10,7 +10,6 @@ import { MdPayment } from 'react-icons/md';
 import { FiSettings } from 'react-icons/fi';
 import { BiHelpCircle } from 'react-icons/bi';
 import { BiMessageDetail } from 'react-icons/bi';
-import { AiOutlineRead } from 'react-icons/ai';
 import { GiBookmark } from 'react-icons/gi';
 import { CiWallet } from 'react-icons/ci';
 import MenuItem from './MenuItem';
@@ -43,10 +42,11 @@ const Sidebar = () => {
       <div className="my-8">
         {' '}
         <MenuItem menuTitle="help" icon={<BiHelpCircle />} />
-        {/* <div onClick={() => logout('user')}> */}
-        <MenuItem menuTitle="logout" icon={<CiLogout />} /> {/* </div> */}
+        {/* <div className="text-red-300" onClick={() => logout('user')}> */}
+        <MenuItem menuTitle="logout" icon={<CiLogout />} />
       </div>
     </div>
+    // </div>
   );
 };
 

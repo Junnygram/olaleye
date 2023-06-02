@@ -1,17 +1,11 @@
 import TopPage from '@/utils/TopPage';
+import Schedule from '@/utils/pagesComponent/Schedule';
 import React from 'react';
 
 const index = () => {
   return (
     <div>
-      <TopPage
-        details={'My Schedule'}
-        name={'olaleye'}
-        info={'olaleye@email.com'}
-        page={'yo'}
-        right={true}
-        src={'/assets/006.jpeg'}
-      />
+      <Schedule />
     </div>
   );
 };

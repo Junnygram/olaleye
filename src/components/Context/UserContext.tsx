@@ -10,9 +10,11 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     Cookies.remove(tokenValue);
     Cookies.remove(userDetails);
     router.push(path || '/login');
-    // Cookies.remove("user");
   };
 
+  // const logout = (tokenValue: any, path?: any) => {
+  //   tokenValue.map((x: any) => Cookies.remove(x));
+  // }
   const contextValue = { user, setUser, logout };
 
   return (

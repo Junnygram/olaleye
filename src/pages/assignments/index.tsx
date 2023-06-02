@@ -1,17 +1,9 @@
-import TopPage from '@/utils/TopPage';
-import React from 'react';
+import Assignment from '@/utils/pagesComponent/Assignment';
 
 const index = () => {
   return (
     <div>
-      <TopPage
-        details={'Assignment'}
-        name={'olaleye'}
-        info={'olaleye@email.com'}
-        page={'yo'}
-        right={true}
-        src={'/assets/006.jpeg'}
-      />
+      <Assignment />
     </div>
   );
 };

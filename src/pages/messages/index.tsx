@@ -1,17 +1,11 @@
 import TopPage from '@/utils/TopPage';
+import Messages from '@/utils/pagesComponent/Messages';
 import React from 'react';
 
 const index = () => {
   return (
     <div>
-      <TopPage
-        details={'Messages'}
-        name={'olaleye'}
-        info={'olaleye@email.com'}
-        page={'yo'}
-        right={true}
-        src={'/assets/006.jpeg'}
-      />
+      <Messages />
     </div>
   );
 };

@@ -1,17 +1,10 @@
-import TopPage from '@/utils/TopPage';
+import Settings from '@/utils/pagesComponent/Settings';
 import React from 'react';
 
 const index = () => {
   return (
     <div>
-      <TopPage
-        details={'Settings'}
-        name={'olaleye'}
-        info={'olaleye@email.com'}
-        page={'yo'}
-        right={true}
-        src={'/assets/006.jpeg'}
-      />
+      <Settings />
     </div>
   );
 };

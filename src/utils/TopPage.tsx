@@ -28,9 +28,9 @@ function TopPage({ details, right, name, info, src }: TopPageProps) {
             <IoIosNotificationsOutline />
           </div> */}
           {right && (
-            <div className="flex gap-1">
+            <div className="flex md:gap-1">
               <div className="flex flex-col ">
-                <span className="text-center text-xl ">{name}</span>{' '}
+                <span className="text-center text-sm md:text-xl">{name}</span>{' '}
                 <span className="text-sm font-thin">{info} </span>
               </div>
               <div className="rounded-full h-10 w-10 py-1">
@@ -45,7 +45,7 @@ function TopPage({ details, right, name, info, src }: TopPageProps) {
                 />{' '}
               </div>
               <Menu as="div" className="relative inline-block font-medium  ">
-                <Menu.Button className="text-blue-600 pt-2">
+                <Menu.Button className="text-blue-600 py-4">
                   <FaAngleDown />
                 </Menu.Button>
                 <Menu.Items className="absolute text-center border-2   divide-y divide-violet-600 right-0 w-20 md:w-32 top-14 origin-top-right bg-white  shadow-lg ">
