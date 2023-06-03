@@ -30,8 +30,8 @@ const Sidebar = () => {
 
         <div className="text-start gap-2  my-4">
           <MenuItem menuTitle="dashboard" icon={<MdOutlineDashboard />} />
-          <MenuItem menuTitle="course builder" icon={<SiCoursera />} />
-          <MenuItem menuTitle="my courses" icon={<CiWallet />} />
+          {/* <MenuItem menuTitle="course builder" icon={<SiCoursera />} /> */}
+          <MenuItem menuTitle="courses" icon={<SiCoursera />} />
           <MenuItem menuTitle="assignments" icon={<AiOutlineHome />} />
           <MenuItem menuTitle="schedule" icon={<AiOutlineSchedule />} />
           <MenuItem menuTitle="messages" icon={<BiMessageDetail />} />
