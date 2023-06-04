@@ -17,7 +17,7 @@ import MenuItem from './MenuItem';
 const Sidebar = () => {
   // const { logout } = useContext(UserContext);
   return (
-    <div className="bg-slate-800 flex flex-col justify-between w-[16%] min-h-screen pt-4 px-6 shadow-xl relative">
+    <div className="bg-blue-500  flex flex-col justify-between w-[16%] min-h-screen pt-4 px-6 shadow-xl relative">
       <div>
         <div className="flex justify-center ">
           <div className="text-white">

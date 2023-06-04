@@ -8,6 +8,7 @@ import Cookies from 'js-cookie';
 import YupPassword from 'yup-password';
 import Image from 'next/image';
 import Link from 'next/link';
+import { GiBookmark } from 'react-icons/gi';
 import SubmitButton from '@/utils/SubmitButton';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; //requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -121,12 +122,15 @@ const Login = () => {
         <div>
           <div className="flex flex-col items-center  justify-center px-6 py-8  h-screen ">
             <div className="my-2">
-              <Image
+              {/* <Image
                 src="/assets/logo.jpeg"
                 alt="logo"
                 height={50}
                 width={50}
-              />
+              /> */}
+              <div className="text-blue-500">
+                <GiBookmark size={30} />
+              </div>
             </div>
             <div className="w-full bg-white rounded-lg shadow   sm:max-w-md  ">
               <div className="p-6">
@@ -164,14 +168,14 @@ const Login = () => {
 
                 <div className="text-sm flex justify-between">
                   <div>
-                    Don&apos;t have an account? You can <br />
+                    {/* Don&apos;t have an account? You can */}
                     <Link href="/register">
                       <span className="text-blue-600 hover:text-blue-800 ">
-                        signup here.
+                        Signup here.
                       </span>
                     </Link>
                   </div>
-                  <Link className="text-blue-600" href="/login/reset">
+                  <Link className="text-blue-600 " href="/login/reset">
                     Forgot password
                   </Link>
                 </div>

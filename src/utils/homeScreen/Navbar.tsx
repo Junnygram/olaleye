@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { GiBookmark } from 'react-icons/gi';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -11,7 +10,7 @@ const Navbar = () => {
   const closeMenu = () => setClick(false);
 
   return (
-    <div className="fixed h-14 py-4  w-full z-10  bg-black ">
+    <div className="fixed h-14 py-4  w-full z-10  bg-blue-500 ">
       <nav className="flex justify-between h-full  align-center py-0 px-4">
         <div>
           <Link href="/" className="logo">
@@ -26,42 +25,52 @@ const Navbar = () => {
             </div>
           </Link>
         </div>
-        <div className="text-white">
+        <div className="text-white ">
           <ul className="hidden md:flex ">
             <li className="px-4">
               {' '}
-              <Link href="/">Home</Link>
+              <Link href="/#home">Home</Link>
             </li>
             <li className="px-4">
               {' '}
-              <Link href="/">About</Link>
+              <Link href="/#about">About</Link>
             </li>
             <li className="px-4">
               {' '}
-              <Link href="/">Testimonial</Link>
+              <Link href="/#testimonial">Testimonial</Link>
             </li>
             <li className="px-4">
               {' '}
-              <Link href="/"></Link> Demo
+              <Link href="/#demo">Demo</Link>
             </li>
           </ul>
+
+          {/* <div>
+            {' '}
+            <button
+              type="button"
+              className="bg-[efefef] h-[30px] w-[60px] bg-white rounded-2xl cursor-pointer "
+            >
+              <span className="block bg-[#999] h-[26px] w-[26px] rounded-full ml-1"></span>
+            </button>
+          </div> */}
         </div>
-        <div className=" md:hidden" onClick={handleClick}>
+        <div className=" md:hidden " onClick={handleClick}>
           {click ? (
-            <FaBars size={30} style={{ color: '#ffffff' }} />
-          ) : (
             <FaTimes size={30} style={{ color: '#ffffff' }} />
+          ) : (
+            <FaBars size={30} style={{ color: '#ffffff' }} />
           )}
         </div>
         <ul
           className={
             click
-              ? 'hidden'
-              : 'fixed top-[90px] w-full text-center md:left-[-100%] bg-transparent'
+              ? 'fixed my-[90px] py-4 w-full text-center md:left-[-100%] mx-[-16px] '
+              : 'hidden'
           }
         >
-          <li className="my-4  ">
-            <Link href="/" onClick={handleClick}>
+          <li className="">
+            <Link href="/#home" onClick={handleClick}>
               Home
             </Link>
           </li>
@@ -71,7 +80,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="my-4 ">
-            <Link href="#testimonials" onClick={handleClick}>
+            <Link href="#testimonial" onClick={handleClick}>
               Testimonials
             </Link>
           </li>

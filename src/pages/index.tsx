@@ -1,11 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import Navbar from '@/utils/homeScreen/Navbar';
+import HomePage from '@/utils/homeScreen/HomePage';
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      <HomePage />
     </div>
   );
 }

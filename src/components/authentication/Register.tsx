@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import Cookies from 'js-cookie';
+import { GiBookmark } from 'react-icons/gi';
 import YupPassword from 'yup-password';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -116,8 +117,16 @@ const Register = () => {
           </Carousel>
         </div>
         <div className="flex flex-col items-center  justify-center px-6 py-8  h-screen lg:py-0">
-          <div>
-            <Image src="/assets/logo.jpeg" alt="logo" height={50} width={50} />
+          <div className="my-2">
+            {/* <Image
+                src="/assets/logo.jpeg"
+                alt="logo"
+                height={50}
+                width={50}
+              /> */}
+            <div className="text-blue-500">
+              <GiBookmark size={30} />
+            </div>
           </div>
           <div className="w-full bg-white rounded-lg shadow   sm:max-w-md  ">
             <div className="p-6">
